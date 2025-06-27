@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: "Futura", "Avenir", "Segoe UI", sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh; /* Ensures page is scrollable */
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.logo-section {
+  margin-left: 60px;
+}
+
+.logo-section img {
+  height: 30px;
+  width: auto;
+}
+
+
+
+
+
+
+
+.menu-button a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  gap: 5px;
+  transition: border 0.3s ease;
+}
+
+.menu-button .line {
+  display: block;
+  height: 2px;
+  background-color: white;
+  width: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.main-header.scrolled .menu-button a {
+  border-color: black;
+}
+
+.main-header.scrolled .menu-button .line {
+  background-color: black;
+}
+
+
+
+
+
+
+.home-nav {
+  height: 122px;
+  display: flex;
+  justify-content: space-between; /* Changed from flex-end */
+  align-items: center;
+  padding: 0 60px; /* Adjust left and right padding */
+  color: white;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+  
+  .nav-options {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .nav-options a {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  
+  .article1 {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen video section */
+    overflow: hidden;
+  }
+  
+  .video1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .home-center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: white;
+  }
+  
+  .line1, .line2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .line1-word1 {
+    display: inline-flex;
+    font-size: 120px;
+    font-family: "GT Sectra Medium", serif;
+    font-weight: 300;
+    gap: 1px;
+  }
+  
+  .line1-letter, .line2-letter {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: moveUp 0.6s forwards;
+  }
+  
+  .line2-word1, .line2-word2 {
+    display: flex;
+    font-size: 100px;
+    font-weight: 500;
+    gap: 5px;
+    margin: 0 10px;
+  }
+  
+  @keyframes moveUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .content-section1 {
+    display: flex;
+    gap: 250px;
+    margin: 150px;
+    padding: 100px 40px;
+    background-color: white;
+    align-items: stretch;
+  }
+  
+  .left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .text-content {
+    margin-bottom: 20px;
+  }
+  
+  .text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .text-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  
+  .left-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .right-side {
+    flex: 1;
+  }
+  
+  .right-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+
+
+
+  .content-section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+  }
+  
+  .left-side-section2 {
+    text-align: left;
+  }
+  
+  .left-side-section2-word1 h2,
+  .left-side-section2-word2 h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .right-side-section2 button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .scroll-container {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .img-travell-x-axis {
+    display: flex;
+    gap: 20px;
+    animation: scrollLoop 40s linear infinite;
+  }
+  
+  .photos {
+    flex: 0 0 auto;
+    width: 500px;
+    height: 800px;
+    position: relative;
+  }
+  
+  .photos img {
+    width: 100%;
+    height: 100%; /* 🔁 Makes image fill the container */
+    object-fit: cover; /* Keeps image nicely scaled */
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .c-slide__content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  @keyframes scrollLoop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+
+
+
+
+
+
+/* ........footer........ */
+
+
+  .site-footer {
+    background-color: #000;
+    color: #eee;
+    padding: 300px 40px; /* 🔼 Increased height with more padding */
+    margin-top: auto;
+    font-size: 18px;
+  }
+  
+  /* Top section of footer */
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 equal columns */
+    gap: 40px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 40px;
+    align-items: flex-start;
+  }
+  
+  /* Left side logo */
+  .footer-logo img {
+    height: 70px; /* Slightly bigger */
+  }
+  
+  /* Sections in order */
+  .footer-sections {
+    display: contents; /* Use grid instead of flex inside */
+  }
+  
+  /* Footer block headings */
+  .footer-block p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  
+  /* Footer block list items */
+  .footer-block li {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #ccc;
+  }
+  
+  /* Bottom footer */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    font-size: 16px;
+    color: #bbb;
+    flex-wrap: wrap;
+  }
