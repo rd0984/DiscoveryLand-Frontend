@@ -1,0 +1,213 @@
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+  #logo{
+    align-content: flex-start;
+  }
+  .nav{
+    display: flex;
+    z-index: 1;
+  
+  
+  }
+  .menu-button a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    gap: 5px;
+    transition: border 0.3s ease;
+}
+
+.menu-button .line {
+    display: block;
+    height: 2px;
+    background-color: white;
+    width: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.main-header.scrolled .menu-button a {
+    border-color: black;
+}
+
+.main-header.scrolled .menu-button .line {
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+  a{
+    text-decoration: none;
+    color: white;
+    margin-right: 40px;
+    font-size: 16px;
+    font-family: "Futura", "Avenir", "Segoe UI", sans-serif;
+    font-weight: 500;
+    gap: 70px;
+  }
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Push behind nav and content */
+    overflow: hidden;
+  }
+  .video1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+  }
+  
+  
+  .menu-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .menu-button a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    /* You can add a background or border if you want */
+  }
+  .menu-button .line {
+    display: block;
+    height: 2px;
+    background-color: white;
+    width: 50%;
+  }
+  nav,
+  .center {
+    position: relative;
+    z-index: 1; /* Keep above video */
+  }
+  .center{
+    display: flex;
+    margin-top: 12%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .name,.subtitle{
+    font-family: "Futura", "Avenir", "Segoe UI", sans-serif;
+    line-height: 1;
+    margin: auto;
+    text-align: center;
+  }
+  #discover{
+    color: #ffffff;
+    font-size: 70px;
+    font-family: "GT Sectra Medium", serif;
+    font-weight: 300;
+  }
+  #your{
+    color: #ffffff;
+    font-family: Serif,"Garamond", serif;
+    font-size: 90px;
+    font-weight: 500;
+  }
+  .bottom{
+    bottom: 45px;
+    position: absolute;
+    left: 45px;
+    color: white;
+    font-family: "Futura", "Avenir", "Segoe UI", sans-serif;
+    font-size: 15px;
+  }
+  
+ 
+  .container1{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+  }
+ 
+  .container2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+  .container2-left{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 7%;
+    margin-left: 2%;
+  
+  }
+  
+  .container3,.container5,.container7{
+    background-color: #f7f7f7;
+    width: 100%;
+    padding-top: 8%;
+    box-sizing: border-box;
+  }
+  .container3-in,.container5-in,.container7-in{
+    position: relative;
+  }
+  .container3-inner,.container5-inner{
+    position: absolute;
+    top:20%;
+    left:50%;
+    padding: 8% 5% 5% 5%;
+  }
+  .explore{
+    align-content: center;
+  }
+  
+ 
+  .container4,.container6{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f7f7f7;
+    width: 100%;
+    padding-top: 8%;
+    box-sizing: border-box;
+  }
+  
+  .container4-in,.container6-in{
+    position: relative;
+  }
+  
+  .container4-inner,.container6-inner{
+    position: absolute;
+    top:20%;
+    left:-25%;
+    padding: 8% 6% 6% 6%;
+  }
+  .container7{
+    padding-bottom: 8%;
+  }
+  .container7-inner{
+    position: absolute;
+    top:10%;
+    left:50%;
+    padding: 8% 5% 5% 5%;
+  }
