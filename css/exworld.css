@@ -1,0 +1,250 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: auto;
+    min-height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 122px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: transparent;
+    transition: background-color 0.4s ease;
+}
+
+.main-header.scrolled {
+    background-color: #fff;
+}
+
+.main-header .logo img {
+    height: 55px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-header .nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu-button a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    gap: 5px;
+    transition: border 0.3s ease;
+}
+
+.menu-button .line {
+    display: block;
+    height: 2px;
+    background-color: white;
+    width: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.main-header.scrolled .menu-button a {
+    border-color: black;
+}
+
+.main-header.scrolled .menu-button .line {
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+.main-header .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.main-header.scrolled .nav-links a {
+    color: black;
+}
+
+
+/* World Content */
+.worldContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    margin-top: 140px;
+}
+
+.content-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+}
+
+/* Image Card */
+.img-text-file {
+    width: 300px;
+    background-color: #111;
+    padding: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-text-file img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.img-text-file:hover img {
+    transform: scale(1.1);
+}
+
+.img-text-file:hover {
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.img-text-file h4 {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.img-text-file p {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #000;
+    color: #eee;
+    padding: 100px 40px;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 1.2s ease;
+}
+
+/* When AOS triggers, this class gets added */
+.aos-animate.site-footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 40px;
+    align-items: flex-start;
+}
+
+.footer-logo img {
+    height: 70px;
+}
+
+.footer-sections {
+    display: contents;
+}
+
+.footer-block p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.footer-block li {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    font-size: 16px;
+    color: #bbb;
+    flex-wrap: wrap;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 992px) {
+    .content-img {
+        gap: 30px;
+    }
+
+    .img-text-file {
+        width: 90%;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-header .nav-links ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-block p,
+    .footer-block li {
+        font-size: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
